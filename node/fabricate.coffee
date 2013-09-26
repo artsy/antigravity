@@ -5,8 +5,6 @@
 # 
 # e.g. `fabricate('artwork', { title: 'Three Wolf Moon'` })
 # 
-# TODO: Find a good way to share this between intertia/torque/microgravity
-# 
 
 _ = require 'underscore'
 
