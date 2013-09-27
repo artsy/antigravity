@@ -77,6 +77,9 @@ gravity.get '/api/v1/partner/:id/shows', (req, res) ->
 gravity.get '/api/v1/search/filtered/fair/:id/options', (req, res) ->
   res.send { medium: { Painting: 'painting' } }
 
+gravity.get '/api/v1/search/filtered/fair/:id/suggest', (req, res) ->
+  res.send { medium: { painting: 420 } }
+
 gravity.get '/api/v1/profile/alessandra/posts', (req, res) ->
   res.send [fabricate 'post']
 
