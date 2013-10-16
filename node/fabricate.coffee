@@ -398,7 +398,9 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: _.uniqueId()
       key: 'homepage:featured'
       item_type: 'FeaturedLink'
-
+      display_on_mobile: true
+      display_on_desktop: true
+      
     when 'sale_artwork'
       id: _.uniqueId()
       user_notes: 'This is a very nice note.'
