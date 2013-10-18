@@ -529,7 +529,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       external_url: "http://www.lempertz-online.de/gldet_gb.asp?v=k1026400009980073900011&mkat=0&mablos=737&msb=&martist=0"
       id: uuid()
       image_url: "http://static1.artsy.net/auction_lots/51d041844c91c616610005a0/thumbnail.jpg"
-      image_versions: [thumbnail]
+      image_versions: ['thumbnail']
       medium_text: "Screenprint on canvas"
       organization: "Lempertz"
       price_realized_text: "€140,300"
