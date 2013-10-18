@@ -527,7 +527,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       dimensions: {in:'20 1/10 × 15 9/10 in', cm:'51 × 40 1/2 cm'}
       estimate_text: "€120,000 - 160,000"
       external_url: "http://www.lempertz-online.de/gldet_gb.asp?v=k1026400009980073900011&mkat=0&mablos=737&msb=&martist=0"
-      id: uuid()
+      id: _.uniqueId()
       image_url: "http://static1.artsy.net/auction_lots/51d041844c91c616610005a0/thumbnail.jpg"
       image_versions: ['thumbnail']
       medium_text: "Screenprint on canvas"
