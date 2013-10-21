@@ -534,5 +534,16 @@ module.exports = fabricate = (type, extObj = {}) ->
       organization: "Lempertz"
       price_realized_text: "€140,300"
       title: "MADONNA PAINTING"
+
+    when 'video'
+      id: _.uniqueId()
+      original_height: 900
+      original_width: 1600
+      title: 'A day in the life of a cat'
+      subtitle: 'Featuring Bitty the Cat'
+      lr_video_url: "http://static.artsy.net/media/max_two_x_two_900"
+      hr_video_url: "http://static.artsy.net/media/max_two_x_two_900"
+      image_versions: ["large_rectangle","medium_rectangle"."small_square","medium_square","large_square","large_cinematic"]
+      image_url: '/local/videos/id/:version.jpg'
   
   , extObj
