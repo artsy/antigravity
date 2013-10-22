@@ -71,7 +71,7 @@ gravity.get '/api/v1/profile/:id', (req, res) ->
   else
     res.send fabricate('profile', owner_type: 'User')
 
-gravity.get '/api/v1/partner/:id/shows', (req, res) ->
+gravity.get '/api/v1/partner/:id/shows*', (req, res) ->
   res.send [fabricate('show', status: 'closed'), fabricate('show', status: 'running')]  
 
 gravity.get '/api/v1/search/filtered/fair/:id/options', (req, res) ->
