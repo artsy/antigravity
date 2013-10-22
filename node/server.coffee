@@ -72,7 +72,7 @@ gravity.get '/api/v1/profile/:id', (req, res) ->
     res.send fabricate('profile', owner_type: 'User')
 
 gravity.get '/api/v1/partner/:id/shows*', (req, res) ->
-  res.send [fabricate('show', status: 'closed'), fabricate('show', status: 'running')]  
+  res.send [fabricate('show', status: 'closed', featured: true), fabricate('show', status: 'running', featured: false)]  
 
 gravity.get '/api/v1/search/filtered/fair/:id/options', (req, res) ->
   res.send { medium: { Painting: 'painting' } }
