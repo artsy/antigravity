@@ -90,5 +90,7 @@ gravity.get '/local/*', (req, res) ->
 gravity.get '/api/v1/artwork/.*/flag', (req, res) ->
   res.send [fabricate 'artwork']
 
+gravity.get '/api/v1/me', (req, res) ->
+  res.send [fabricate 'user']
 
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
