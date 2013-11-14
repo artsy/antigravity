@@ -545,5 +545,15 @@ module.exports = fabricate = (type, extObj = {}) ->
       hr_video_url: "http://static.artsy.net/media/max_two_x_two_900"
       image_versions: ["large_rectangle","medium_rectangle","small_square","medium_square","large_square","large_cinematic"]
       image_url: '/local/videos/id/:version.jpg'
+
+    when 'bidder_position'
+      active: true
+      bid_max: false
+      created_at: "2013-11-14T00:03:27Z"
+      highest_bid: null
+      id: "5284134f8b3b81a906000003"
+      max_bid_amount_cents: 310000
+      suggested_next_bid_cents: 325000
+      updated_at: "2013-11-14T00:03:27Z"
   
   , extObj
