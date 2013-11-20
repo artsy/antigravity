@@ -1,6 +1,6 @@
-# 
+#
 # Fake gravity express app
-# 
+#
 
 _ = require 'underscore'
 express = require 'express'
@@ -47,7 +47,7 @@ gravity.get '/api/v1/fair/:id/sections', (req, res) ->
   ]
 
 gravity.get '/api/v1/fair/:id/shows', (req, res) ->
-  res.send results: [fabricate('show', 
+  res.send results: [fabricate('show',
     fair: fabricate('fair')
     fair_location: { display: 'Dock 4' }
     artworks: [fabricate('artwork')]
@@ -68,12 +68,51 @@ gravity.get '/api/v1/profile/:id', (req, res) ->
     res.send fabricate 'profile',
       owner_type: 'PartnerGallery'
       owner: fabricate('partner', id: 'gagosian-gallery')
+  else if req.params.id is 'lacma'
+    res.send fabricate 'profile',
+      owner_type: 'PartnerMuseum'
+      owner: fabricate('partner', id: 'lacma')
   else
     res.send fabricate('profile', owner_type: 'User')
 
+gravity.get '/api/v1/partner/:id', (req, res) ->
+  if req.params.id is 'gagosian-gallery'
+    res.send fabricate('partner', {
+      id: 'gagosian-gallery'
+      default_profile_id: 'gagosian-gallery'
+      displayable_shows_count: 2
+      profile: fabricate('profile',
+        owner_type: 'PartnerGallery'
+        owner: fabricate('partner', id: 'gagosian-gallery')
+      )
+    })
+  else if req.params.id is 'lacma'
+    res.send fabricate('partner', {
+      id: 'lacma'
+      default_profile_id: 'lacma'
+      displayable_shows_count: 1
+      name: 'Los Angeles County Museum Of Art'
+      published_not_for_sale_artworks_count: 1
+      published_for_sale_artworks_count: 1
+      profile: fabricate('profile',
+        owner_type: 'PartnerMuseum'
+        owner: fabricate('partner', id: 'lacma')
+      )
+    })
+  else
+    res.send fabricate('partner')
+
+gravity.get '/api/v1/partner/:id/locations', (req, res) ->
+  return res.send [] if req.query.page > 2
+  res.send [fabricate('location'), fabricate('location')]
+
 gravity.get '/api/v1/partner/:id/shows', (req, res) ->
   return res.send [] if req.query.page > 2
-  res.send [fabricate('show', status: 'closed', featured: true), fabricate('show', status: 'running', featured: false)]  
+  res.send [fabricate('show', status: 'closed', featured: true), fabricate('show', status: 'running', featured: false)]
+
+gravity.get '/api/v1/partner/:id/artworks', (req, res) ->
+  return res.send [] if req.query.page > 2
+  res.send [fabricate('artwork'), fabricate('artwork')]
 
 gravity.get '/api/v1/search/filtered/fair/:id/options', (req, res) ->
   res.send { medium: { Painting: 'painting' } }
