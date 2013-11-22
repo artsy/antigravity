@@ -22,6 +22,9 @@ gravity.get '/api/v1/related/posts', (req, res) ->
 gravity.get '/api/v1/related/layer/synthetic/main/artworks', (req, res) ->
   res.send [fabricate('artwork', title: 'Suggested artwork!'), fabricate('artwork')]
 
+gravity.get '/api/v1/related/genes', (req, res) ->
+  res.send [fabricate('gene', title: 'Related gene!'), fabricate('gene')]
+
 gravity.get '/api/v1/xapp_token', (req, res) ->
   res.send { xapp_token: 'xapp_foobar', expires_in: 'expires in utc string' }
 
