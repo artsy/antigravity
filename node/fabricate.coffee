@@ -388,11 +388,28 @@ module.exports = fabricate = (type, extObj = {}) ->
       user: fabricate 'user'
       line_items: [ fabricate 'order_line_item' ]
       token: 'foobaz'
+      item_total_cents: 180000
+      tax_total_cents: 0
+      total_cents: 180000
+      item_total: '$1,800.00'
+      tax_total: '$0.00'
+      total: '$1,800.00'
 
     when 'order_line_item'
       id: _.uniqueId()
       artwork: fabricate 'artwork'
       quantity: 1
+      shipping_note: "HI I'm a shipping note"
+      sale_conditions_url: 'http://shipping.conditions.com'
+      price_cents: 180000
+      tax_cents: 0
+      subtotal_cents: 180000
+      price: '$1,800.00'
+      subtotal: '$1,800.00'
+      artwork: fabricate('artwork')
+      edition_set: fabricate('edition_set', acquireable: true, sold: false, forsale: true, price: '$1,800' )
+      partner: fabricate('partner')
+      partner_location: fabricate('partner_location')
 
     when 'fair'
       id: "armory-show-2013"
@@ -619,35 +636,5 @@ module.exports = fabricate = (type, extObj = {}) ->
       email: 'info@eliridgway.com'
       fax: ''
       publicly_viewable: true
-
-    when 'order'
-      id: _.uniqueId()
-      code: '484A30'
-      state: 'pending'
-      notes: 'some order notes'
-      item_total_cents: 180000
-      tax_total_cents: 0
-      total_cents: 180000
-      item_total: '$1,800.00'
-      tax_total: '$0.00'
-      total: '$1,800.00'
-      shipping_address: null
-      email: null
-      telephone: null
-      line_items: [{
-        id: 'line-item-id'
-        quantity: 1
-        shipping_note: "HI I'm a shipping note"
-        sale_conditions_url: 'http://shipping.conditions.com'
-        price_cents: 180000
-        tax_cents: 0
-        subtotal_cents: 180000
-        price: '$1,800.00'
-        subtotal: '$1,800.00'
-        artwork: fabricate('artwork')
-        edition_set: fabricate('edition_set', acquireable: true, sold: false, forsale: true, price: '$1,800' )
-        partner: fabricate('partner')
-        partner_location: fabricate('partner_location')
-      }]
 
   , extObj
