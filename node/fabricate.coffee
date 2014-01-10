@@ -604,6 +604,22 @@ module.exports = fabricate = (type, extObj = {}) ->
       suggested_next_bid_cents: 325000
       updated_at: "2013-11-14T00:03:27Z"
 
+    when 'partner_location'
+      id: _.uniqueId()
+      name: 'Eli Ridgway'
+      address: '172 Minna Street'
+      address_2: ''
+      city: 'San Francisco'
+      country: 'United States'
+      state: 'CA'
+      postal_code: '94105'
+      phone: '415-777-1366'
+      coordinates: null
+      position: 1
+      email: 'info@eliridgway.com'
+      fax: ''
+      publicly_viewable: true
+
     when 'order'
       id: _.uniqueId()
       code: '484A30'
@@ -631,21 +647,7 @@ module.exports = fabricate = (type, extObj = {}) ->
         artwork: fabricate('artwork')
         edition_set: fabricate('edition_set', acquireable: true, sold: false, forsale: true, price: '$1,800' )
         partner: fabricate('partner')
-        partner_location: {
-          name: 'Eli Ridgway'
-          address: '172 Minna Street'
-          address_2: ''
-          city: 'San Francisco'
-          country: 'United States'
-          state: 'CA'
-          postal_code: '94105'
-          phone: '415-777-1366'
-          coordinates: null
-          position: 1
-          email: 'info@eliridgway.com'
-          fax: ''
-          publicly_viewable: true
-        }
+        partner_location: fabricate('partner_location')
       }]
 
   , extObj
