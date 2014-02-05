@@ -40,9 +40,6 @@ gravity.get '/api/v1/match', (req, res) ->
 gravity.get '/api/v1/admins/available_representatives', (req, res) ->
   res.send [fabricate('user')]
 
-gravity.get '/api/v1/profile/alessandra', (req, res) ->
-  res.send fabricate('profile')
-
 gravity.get '/api/v1/fair/:id', (req, res) ->
   res.send fabricate('fair')
 
@@ -67,6 +64,9 @@ gravity.get '/api/v1/sets', (req, res) ->
 
 gravity.get '/api/v1/set/:id/items', (req, res) ->
   res.send [fabricate('featured_link'), fabricate('featured_link')]
+
+gravity.get '/api/v1/profile/404', (req, res) ->
+  next(new Error('404 Profile not found'))
 
 gravity.get '/api/v1/profile/:id', (req, res) ->
   if req.params.id is 'thearmoryshow'
