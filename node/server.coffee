@@ -16,6 +16,9 @@ gravity.get '/api/v1/artwork/:id', (req, res) ->
 gravity.get '/api/v1/post/:id', (req, res) ->
   res.send fabricate 'post', title: 'Main post!'
 
+gravity.get '/api/v1/shortcut/:id', (req, res) ->
+  res.send fabricate 'shortcut'
+
 gravity.get '/api/v1/related/posts', (req, res) ->
   res.send [fabricate('post', title: 'Related post!'), fabricate('post')]
 
