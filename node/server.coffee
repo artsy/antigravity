@@ -65,11 +65,10 @@ gravity.get '/api/v1/sets', (req, res) ->
 gravity.get '/api/v1/set/:id/items', (req, res) ->
   res.send [fabricate('featured_link'), fabricate('featured_link')]
 
-gravity.get '/api/v1/profile/404', (req, res) ->
-  next(new Error('404 Profile not found'))
-
 gravity.get '/api/v1/profile/:id', (req, res) ->
-  if req.params.id is 'thearmoryshow'
+  if req.params.id is '404'
+    res.send 404, "Not Found."
+  else if req.params.id is 'thearmoryshow'
     res.send fabricate 'profile',
       owner_type: 'FairOrganizer'
       owner: { default_fair_id: 'the-armory-show' }
