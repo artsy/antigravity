@@ -490,7 +490,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       default_fair_id: "armory-show-2013"
       profile_id: "the-armory-show"
       id: "armory-show-2013"
-      name: "Zona MACO 2014"
+      name: "Armory Show Fair Organizer"
 
     when 'fair_profile'
       cover_image: null
@@ -504,7 +504,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       bio: "Awesome Fair"
       default_icon_version: "square"
       owner_type: "FairOrganizer"
-      follows_count:307
+      follows_count: 307
       short_description: null
       published: true
 
