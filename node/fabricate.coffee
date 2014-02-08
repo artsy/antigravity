@@ -496,6 +496,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       cover_image: null
       posts_count: 0
       reposts_count: 8
+      owner: fabricate 'fair_organizer'
       id: "the-armory-show"
       subtype: null
       website: "http://getty.edu/"
