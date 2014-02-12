@@ -731,25 +731,14 @@ module.exports = fabricate = (type, extObj = {}) ->
       image_url: "/foo/bar/:version.jpg"
       represented_by: true
       published_artworks_count: 7
-      artist:
-        id: "josef-albers" + _.uniqueId()
-        sortable_id: "albers-josef"
-        name: "Josef Albers"
-        years: "1888-1976"
-        public: true
-        published_artworks_count: 57
-        forsale_artworks_count: 40
-        artworks_count: 122
-        image_versions: ["square", "tall", "large"]
-        image_url: "/foo/bar/too/:version.jpg"
-      partner:
-        id: "pace-gallery" + _.uniqueId()
-        default_profile_id: "pace-gallery"
-        default_profile_public: true
-        sortable_id: "pace"
-        type: "Gallery"
-        name: "Pace Gallery"
-        website: "http://www.pacegallery.com"
-        has_full_profile: true
+      artist: do ->
+        a = fabricate 'artist',
+          public: true
+          published_artworks_count: 57
+          forsale_artworks_count: 40
+          artworks_count: 122
+        delete a.blurb
+        a
+      partner: fabricate 'partner'
 
   , extObj
