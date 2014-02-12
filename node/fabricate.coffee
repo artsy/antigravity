@@ -731,14 +731,12 @@ module.exports = fabricate = (type, extObj = {}) ->
       image_url: "/foo/bar/:version.jpg"
       represented_by: true
       published_artworks_count: 7
-      artist: do ->
-        a = fabricate 'artist',
-          public: true
-          published_artworks_count: 57
-          forsale_artworks_count: 40
-          artworks_count: 122
-        delete a.blurb
-        a
+      artist: fabricate 'artist',
+        public: true
+        published_artworks_count: 57
+        forsale_artworks_count: 40
+        artworks_count: 122
+        blurb: undefined
       partner: fabricate 'partner'
 
   , extObj
