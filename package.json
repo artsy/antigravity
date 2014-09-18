@@ -1,13 +1,25 @@
 {
-  "name": "antigravity",
-  "version": "0.0.2",
-  "private": true,
-  "engines": {
-    "node": "0.10.x"
-  },
-  "devDependencies": {
-    "express": "*",
-    "underscore": "*",
-    "coffee-script": "*"
-  }
+    "name": "antigravity",
+    "version": "0.0.3",
+    "private": true,
+    "engines": {
+        "node": "0.10.x"
+    },
+    "author": {
+        "name": "Craig Spaeth",
+        "email": "craigspaeth@gmail.com",
+        "url": "http://craigspaeth.com"
+    },
+    "contributors": [{
+        "name": "Brennan Moore",
+        "email": "brennanmoore@gmail.com",
+        "url": "http://brennanmoore.com"
+    }],
+    "dependencies": {
+        "express": "*"
+    },
+    "devDependencies": {
+        "underscore": "*",
+        "coffee-script": "*"
+    }
 }
