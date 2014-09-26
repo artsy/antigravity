@@ -149,4 +149,17 @@ gravity.post '/api/v1/me/artwork_inquiry_request', (req, res) ->
 gravity.get '/post', (req, res) ->
   res.send 'Get your post on!'
 
+gravity.get '/oauth2/access_token', (req, res) ->
+  res.send { access_token: 'test-access-token', expires_in: '2020-08-28T12:10:22Z' }
+
+#
+# API V2 -----------------------------------------------------------------------
+#
+
+gravity.get '/api', (req, res) ->
+  res.send JSON.parse require('./hal_root').replace /ROOT/g, req.protocol + '://' + req.get('host') + req.originalUrl
+
+gravity.get '/api/current_user', (req, res) ->
+  res.send  {"id":"4d8cd73191a5c50ce200002a","name":"Craig Spaeth","_links":{"self":{"href":"https://stagingapi.artsy.net/api/users/4d8cd73191a5c50ce200002a"},"profile":{"href":"https://stagingapi.artsy.net/api/profiles/5086df098523e60002000012"},"user_details":{"href":"https://stagingapi.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"}}}
+
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
