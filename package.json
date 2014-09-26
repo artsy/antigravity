@@ -16,7 +16,8 @@
         "url": "http://brennanmoore.com"
     }],
     "dependencies": {
-        "express": "*"
+        "express": "*",
+    "body-parser": "*"
     },
     "devDependencies": {
         "underscore": "*",

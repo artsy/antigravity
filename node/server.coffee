@@ -3,6 +3,7 @@
 #
 
 _ = require 'underscore'
+bodyParser = require 'body-parser'
 express = require 'express'
 fabricate = require './fabricate'
 { spawn } = require 'child_process'
@@ -151,6 +152,15 @@ gravity.get '/post', (req, res) ->
 
 gravity.get '/oauth2/access_token', (req, res) ->
   res.send { access_token: 'test-access-token', expires_in: '2020-08-28T12:10:22Z' }
+
+gravity.get '/oauth2/authorize', (req, res) ->
+  res.send "<form action='/oauth2/authorize' method='POST'>
+            <input type='hidden' name='redirect_uri' value='#{req.query.redirect_uri}'>
+            Login<input value=''/>
+            </form>"
+
+gravity.post '/oauth2/authorize', (req, res) ->
+  res.redirect req.param 'redirect_uri'
 
 #
 # API V2 -----------------------------------------------------------------------
