@@ -17,7 +17,7 @@
     }],
     "dependencies": {
         "express": "*",
-    "body-parser": "*"
+        "body-parser": "*"
     },
     "devDependencies": {
         "underscore": "*",
