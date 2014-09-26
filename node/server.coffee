@@ -6,10 +6,13 @@ _ = require 'underscore'
 bodyParser = require 'body-parser'
 express = require 'express'
 fabricate = require './fabricate'
+fabricate2 = require './fabricate2'
 { spawn } = require 'child_process'
 path = require 'path'
 
 gravity = module.exports = express()
+
+gravity.use bodyParser()
 
 gravity.get '/api/v1/artwork/:id', (req, res) ->
   res.send fabricate 'artwork', title: 'Main artwork!'
@@ -150,17 +153,20 @@ gravity.post '/api/v1/me/artwork_inquiry_request', (req, res) ->
 gravity.get '/post', (req, res) ->
   res.send 'Get your post on!'
 
-gravity.get '/oauth2/access_token', (req, res) ->
+gravity.all '/oauth2/access_token', (req, res) ->
   res.send { access_token: 'test-access-token', expires_in: '2020-08-28T12:10:22Z' }
 
 gravity.get '/oauth2/authorize', (req, res) ->
-  res.send "<form action='/oauth2/authorize' method='POST'>
-            <input type='hidden' name='redirect_uri' value='#{req.query.redirect_uri}'>
-            Login<input value=''/>
-            </form>"
-
-gravity.post '/oauth2/authorize', (req, res) ->
-  res.redirect req.param 'redirect_uri'
+  return res.redirect req.param('redirect_uri') + '?code=test-oauth-code' if req.param 'redirect_uri'
+  res.send "<!DOCTYPE html>
+            <html>
+              <body>
+                <form>
+                  <input type='hidden' name='redirect_uri' value='#{req.query.redirect_uri}' />
+                  <input type='submit' value='Login'/>
+                </form>
+                </body>
+            </html>"
 
 #
 # API V2 -----------------------------------------------------------------------
@@ -170,6 +176,10 @@ gravity.get '/api', (req, res) ->
   res.send JSON.parse require('./hal_root').replace /ROOT/g, req.protocol + '://' + req.get('host') + req.originalUrl
 
 gravity.get '/api/current_user', (req, res) ->
-  res.send  {"id":"4d8cd73191a5c50ce200002a","name":"Craig Spaeth","_links":{"self":{"href":"https://stagingapi.artsy.net/api/users/4d8cd73191a5c50ce200002a"},"profile":{"href":"https://stagingapi.artsy.net/api/profiles/5086df098523e60002000012"},"user_details":{"href":"https://stagingapi.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"}}}
+  root = req.protocol + '://' + req.get('host') + req.originalUrl.replace('current_user', '')
+  res.send  {"id":"4d8cd73191a5c50ce200002a","name":"Craig Spaeth","_links":{"self":{"href":"#{root}users/4d8cd73191a5c50ce200002a"},"profile":{"href":"#{root}profiles/5086df098523e60002000012"},"user_details":{"href":"#{root}api/user_details/4d8cd73191a5c50ce200002a"}}}
+
+gravity.get '/api/profiles/:id', (req, res) ->
+  res.send fabricate2 'profile'
 
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
