@@ -3,7 +3,6 @@
 #
 
 _ = require 'underscore'
-bodyParser = require 'body-parser'
 express = require 'express'
 fabricate = require './fabricate'
 fabricate2 = require './fabricate2'
@@ -11,8 +10,6 @@ fabricate2 = require './fabricate2'
 path = require 'path'
 
 gravity = module.exports = express()
-
-gravity.use bodyParser()
 
 gravity.get '/api/v1/artwork/:id', (req, res) ->
   res.send fabricate 'artwork', title: 'Main artwork!'
