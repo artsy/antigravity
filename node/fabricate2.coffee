@@ -17,13 +17,13 @@ module.exports = fabricate = (type, extObj = {}) ->
       name: "Craig Spaeth"
       _links:
         self:
-          href: "https://api.artsy.net/api/users/4d8cd73191a5c50ce200002a"
+          href: "http://localhost:5000/__gravity/api/users/4d8cd73191a5c50ce200002a"
 
         profile:
-          href: "https://api.artsy.net/api/profiles/5086df098523e60002000012"
+          href: "http://localhost:5000/__gravity/api/profiles/5086df098523e60002000012"
 
         user_details:
-          href: "https://api.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"
+          href: "http://localhost:5000/__gravity/api/user_details/4d8cd73191a5c50ce200002a"
 
     when 'user_profile'
       id: "5086df098523e60002000012"
@@ -61,7 +61,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       gender: null
       _links:
         self:
-          href: "https://api.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"
+          href: "http://localhost:5000/__gravity/api/user_details/4d8cd73191a5c50ce200002a"
 
         user:
-          href: "https://api.artsy.net/api/user/4d8cd73191a5c50ce200002a"
+          href: "http://localhost:5000/__gravity/api/user/4d8cd73191a5c50ce200002a"
