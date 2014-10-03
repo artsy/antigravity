@@ -9,10 +9,23 @@
 _ = require 'underscore'
 
 module.exports = fabricate = (type, extObj = {}) ->
-  
+
   _.extend switch type
 
-    when 'profile'
+    when 'current_user'
+      id: "4d8cd73191a5c50ce200002a"
+      name: "Craig Spaeth"
+      _links:
+        self:
+          href: "https://api.artsy.net/api/users/4d8cd73191a5c50ce200002a"
+
+        profile:
+          href: "https://api.artsy.net/api/profiles/5086df098523e60002000012"
+
+        user_details:
+          href: "https://api.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"
+
+    when 'user_profile'
       id: "5086df098523e60002000012"
       created_at: "2012-10-23T18:16:41+00:00"
       updated_at: "2014-09-24T20:38:41+00:00"
@@ -36,3 +49,19 @@ module.exports = fabricate = (type, extObj = {}) ->
         website:
           href: ""
       image_versions: ["square140"]
+
+    when 'user_details'
+      id: "4d8cd73191a5c50ce200002a"
+      created_at: "2011-07-18T17:53:47+00:00"
+      updated_at: "2014-10-03T01:59:14+00:00"
+      type: "Admin"
+      email: "craig@artsymail.com"
+      birthday: null
+      phone: ""
+      gender: null
+      _links:
+        self:
+          href: "https://api.artsy.net/api/user_details/4d8cd73191a5c50ce200002a"
+
+        user:
+          href: "https://api.artsy.net/api/user/4d8cd73191a5c50ce200002a"
