@@ -174,9 +174,12 @@ gravity.get '/api', (req, res) ->
 
 gravity.get '/api/current_user', (req, res) ->
   root = req.protocol + '://' + req.get('host') + req.originalUrl.replace('current_user', '')
-  res.send  {"id":"4d8cd73191a5c50ce200002a","name":"Craig Spaeth","_links":{"self":{"href":"#{root}users/4d8cd73191a5c50ce200002a"},"profile":{"href":"#{root}profiles/5086df098523e60002000012"},"user_details":{"href":"#{root}api/user_details/4d8cd73191a5c50ce200002a"}}}
+  res.send  fabricate2 'current_user'
 
 gravity.get '/api/profiles/:id', (req, res) ->
-  res.send fabricate2 'profile'
+  res.send fabricate2 'user_profile'
+
+gravity.get '/api/user_details/:id', (req, res) ->
+  res.send fabricate2 'user_details'
 
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
