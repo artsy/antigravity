@@ -182,4 +182,13 @@ gravity.get '/api/profiles/:id', (req, res) ->
 gravity.get '/api/user_details/:id', (req, res) ->
   res.send fabricate2 'user_details'
 
+gravity.get '/api/artworks/:id', (req, res) ->
+  res.send fabricate2 'artwork'
+
+gravity.get '/api/artists', (req, res) ->
+  res.send fabricate2 'artists'
+
+gravity.get '/api/partners/:id', (req, res) ->
+  res.send fabricate2 'partner'
+
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
