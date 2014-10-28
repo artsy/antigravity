@@ -35,7 +35,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       _links:
         curies: [
           name: "image"
-          href: "http://stagic3.artsy.net/profile_icons/504e2c4fbb39040002000483/{?rel}"
+          href: "http://stagic3.artsy.net/profile_icons/504e2c4fbb39040002000483/{rel}"
           templated: true
         ]
         thumbnail:
