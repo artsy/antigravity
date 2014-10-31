@@ -191,4 +191,7 @@ gravity.get '/api/artists', (req, res) ->
 gravity.get '/api/partners/:id', (req, res) ->
   res.send fabricate2 'partner'
 
+gravity.get '/api/search', (req, res) ->
+  res.send fabricate2 'search'
+
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
