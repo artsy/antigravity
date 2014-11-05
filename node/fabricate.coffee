@@ -804,7 +804,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       price_range:
         "-1:1000000000000": 58
 
-  when 'artist_filtered_search_nested_suggest'
+    when 'artist_filtered_search_nested_suggest'
       total: 65
       related_gene: {}
       medium:
