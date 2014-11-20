@@ -194,4 +194,8 @@ gravity.get '/api/partners/:id', (req, res) ->
 gravity.get '/api/search', (req, res) ->
   res.send fabricate2 'search'
 
+gravity.get '/api/search', (req, res) ->
+  return res.send fabricate2 'empty_search' if req.query.q is 'NoResults'
+  res.send fabricate2 'search'
+
 gravity.all '*', (req, res) -> res.send 404, "Not Found."
