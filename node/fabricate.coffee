@@ -517,6 +517,21 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: "whtney-art-party"
       name: 'Whitney Art Party'
       description: "This is a great party"
+      buyers_premium: {
+        '_id': '54cff2e3776f7266e5000000'
+        'id': 'la-modern'
+        'name': 'LA Modern'
+        'schedule': [
+          {
+            'min_amount_cents': 0
+            'percent': 0.25
+          }
+          {
+            'min_amount_cents': 50000000
+            'percent': 0.15
+          }
+        ]
+      }
 
     when 'feature'
       id: "bitty-the-cat"
