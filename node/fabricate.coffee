@@ -486,6 +486,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       links: '[Google](http://google.com)'
       summary: '**foobar**'
       about: 'We Rawk!'
+      default_profile_id: 'the-armory-show'
       organizer:
         profile_id: 'the-armory-show'
         name: 'Armory Show'
