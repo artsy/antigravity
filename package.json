@@ -20,5 +20,6 @@
     "devDependencies": {
         "underscore": "*",
         "coffee-script": "*"
-    }
+    },
+    "license": "MIT"
 }
