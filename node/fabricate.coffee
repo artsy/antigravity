@@ -746,6 +746,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       image_versions: ["four_thirds", "four_thirds_retina", "square"]
       image_url: "/foo/bar/:version.jpg"
       represented_by: true
+      display_on_partner_profile: true
       published_artworks_count: 7
       artist: fabricate 'artist',
         public: true
