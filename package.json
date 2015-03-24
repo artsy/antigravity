@@ -1,9 +1,6 @@
 {
     "name": "antigravity",
-    "version": "0.0.4",
-    "engines": {
-        "node": "0.10.x"
-    },
+    "version": "0.1.0",
     "author": {
         "name": "Craig Spaeth",
         "email": "craigspaeth@gmail.com",
