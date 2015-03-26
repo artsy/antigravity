@@ -497,7 +497,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: "armory-show-2013"
       name: "Armory Show Fair Organizer"
 
-    when 'fair_profile'
+    when 'fair_organizer_profile'
       cover_image: null
       posts_count: 0
       reposts_count: 8
@@ -507,9 +507,26 @@ module.exports = fabricate = (type, extObj = {}) ->
       website: "http://getty.edu/"
       location: null
       private: false
-      bio: "Awesome Fair"
+      bio: "Awesome Fair Organizer"
       default_icon_version: "square"
       owner_type: "FairOrganizer"
+      follows_count: 307
+      short_description: null
+      published: true
+
+    when 'fair_profile'
+      cover_image: null
+      posts_count: 0
+      reposts_count: 8
+      owner: fabricate 'fair'
+      id: "the-armory-show"
+      subtype: null
+      website: "http://getty.edu/"
+      location: null
+      private: false
+      bio: "Awesome Fair"
+      default_icon_version: "square"
+      owner_type: "Fair"
       follows_count: 307
       short_description: null
       published: true
