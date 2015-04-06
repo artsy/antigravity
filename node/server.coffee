@@ -72,7 +72,7 @@ gravity.get '/api/v1/profile/:id', (req, res) ->
     res.send 404, "Not Found."
   else if req.params.id is 'thearmoryshow'
     res.send fabricate 'profile',
-      owner_type: 'FairOrganizer'
+      owner_type: 'Fair'
       owner: { default_fair_id: 'the-armory-show' }
   else if req.params.id is 'gagosian-gallery'
     res.send fabricate 'profile',
