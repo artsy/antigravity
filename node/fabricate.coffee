@@ -116,6 +116,7 @@ module.exports = fabricate = (type, extObj = {}) ->
 
     when 'partner'
       id: 'gagosian' + _.uniqueId()
+      _id: '5086df098523e60002000012'
       name: 'Gagosian Gallery'
       admin: fabricate 'user'
       sortable_id: 'gagosian'
@@ -167,11 +168,11 @@ module.exports = fabricate = (type, extObj = {}) ->
       item_type: 'FeaturedLink'
 
     when 'user'
-      id: 'foobar' + _.uniqueId()
+      id: '54276766fd4f50996aeca2b8'
       name: 'Craig Spaeth'
       website: null
       email: 'craigspaeth@gmail.com'
-      type: 'User'
+      type: 'Admin'
       lab_features: []
       profession: 'engineer'
       address: '401 Broadway'
@@ -486,6 +487,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       links: '[Google](http://google.com)'
       summary: '**foobar**'
       about: 'We Rawk!'
+      default_profile_id: 'the-armory-show'
       organizer:
         profile_id: 'the-armory-show'
         name: 'Armory Show'
@@ -496,7 +498,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: "armory-show-2013"
       name: "Armory Show Fair Organizer"
 
-    when 'fair_profile'
+    when 'fair_organizer_profile'
       cover_image: null
       posts_count: 0
       reposts_count: 8
@@ -506,9 +508,26 @@ module.exports = fabricate = (type, extObj = {}) ->
       website: "http://getty.edu/"
       location: null
       private: false
-      bio: "Awesome Fair"
+      bio: "Awesome Fair Organizer"
       default_icon_version: "square"
       owner_type: "FairOrganizer"
+      follows_count: 307
+      short_description: null
+      published: true
+
+    when 'fair_profile'
+      cover_image: null
+      posts_count: 0
+      reposts_count: 8
+      owner: fabricate 'fair'
+      id: "the-armory-show"
+      subtype: null
+      website: "http://getty.edu/"
+      location: null
+      private: false
+      bio: "Awesome Fair"
+      default_icon_version: "square"
+      owner_type: "Fair"
       follows_count: 307
       short_description: null
       published: true
@@ -517,6 +536,21 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: "whtney-art-party"
       name: 'Whitney Art Party'
       description: "This is a great party"
+      buyers_premium: {
+        '_id': '54cff2e3776f7266e5000000'
+        'id': 'la-modern'
+        'name': 'LA Modern'
+        'schedule': [
+          {
+            'min_amount_cents': 0
+            'percent': 0.25
+          }
+          {
+            'min_amount_cents': 50000000
+            'percent': 0.15
+          }
+        ]
+      }
 
     when 'feature'
       id: "bitty-the-cat"
@@ -730,6 +764,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       image_versions: ["four_thirds", "four_thirds_retina", "square"]
       image_url: "/foo/bar/:version.jpg"
       represented_by: true
+      display_on_partner_profile: true
       published_artworks_count: 7
       artist: fabricate 'artist',
         public: true
@@ -759,49 +794,98 @@ module.exports = fabricate = (type, extObj = {}) ->
       updated_at: "2014-02-24T16:34:25Z"
 
     when 'artist_filtered_search_suggest'
-      total: 65
+      total: 79
       related_gene: {}
       medium:
-        design: 1
-        drawing: 10
-        installation: 1
-        painting: 7
-        prints: 8
-        sculpture: 23
-        "work-on-paper": 41
+        design:
+          name: "Design"
+          count: 2
+        drawing:
+          name: "Drawing"
+          count: 10
+        painting:
+          name: "Painting"
+          count: 7
+        prints:
+          name: "Prints"
+          count: 8
+        sculpture:
+          name: "Sculpture"
+          count: 32
+        "work-on-paper":
+          name: "Work On Paper"
+          count: 44
       dimension:
-        96: 63
+        96:
+          name: "96"
+          count: 76
       gallery:
-        "armand-bartos-fine-art": 2
-        "artware-editions": 1
-        "barbara-krakow-gallery": 4
-        "carolina-nitsch-contemporary-art": 15
-        "casterline-goodman-gallery": 1
-        caviar20: 1
-        "cheim-and-read": 21
-        "galerie-le-minotaure": 1
-        "galerie-zlotowski": 1
-        "lora-reynolds-gallery": 1
-        mixografia: 1
-        "peter-blum-gallery": 4
-        "robert-miller-gallery": 2
-        "senior-and-shopmaker-gallery": 3
-        "susan-sheehan-gallery": 1
-        "xavier-hufkens": 3
+        "barbara-krakow-gallery":
+          name: "Barbara Krakow Gallery"
+          count: 3
+        "carolina-nitsch-contemporary-art":
+          name: "Carolina Nitsch Contemporary Art"
+          count: 17
+        caviar20:
+          name: "Caviar20"
+          count: 2
+        "cheim-and-read":
+          name: "Cheim & Read"
+          count: 28
+        "peter-blum-gallery":
+          name: "Peter Blum Gallery"
+          count: 4
+        "robert-miller-gallery":
+          name: "Robert Miller Gallery"
+          count: 2
+        "senior-and-shopmaker-gallery":
+          name: "Senior & Shopmaker Gallery"
+          count: 3
+        "xavier-hufkens":
+          name: "Xavier Hufkens"
+          count: 3
       institution:
-        "miniature-museum-ria-and-lex-daniels": 1
-        "museum-of-arts-and-design": 1
-        "serpentine-gallery": 1
+        "miniature-museum-ria-and-lex-daniels":
+          name: "Miniature Museum Ria and Lex Daniels"
+          count: 1
+        "museum-of-arts-and-design":
+          name: "Museum of Arts and Design"
+          count: 1
+        "serpentine-gallery":
+          name: "Serpentine Gallery"
+          count: 1
+        "whitechapel-gallery":
+          name: "Whitechapel Gallery"
+          count: 1
       period:
-        1940: 4
-        1960: 8
-        1970: 1
-        1980: 3
-        1990: 16
-        2000: 27
-        2010: 3
+        1940:
+          name: "1940s"
+          count: 5
+        1950:
+          name: "1950s"
+          count: 1
+        1960:
+          name: "1960s"
+          count: 9
+        1970:
+          name: "1970s"
+          count: 1
+        1980:
+          name: "1980s"
+          count: 3
+        1990:
+          name: "1990s"
+          count: 22
+        2000:
+          name: "2000s"
+          count: 32
+        2010:
+          name: "2010s"
+          count: 3
       sale_status: {}
       price_range:
-        "-1:1000000000000": 58
+        "-1:1000000000000":
+          name: "-1:1000000000000"
+          count: 74
 
   , extObj

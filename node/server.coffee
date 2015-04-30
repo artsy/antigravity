@@ -72,7 +72,7 @@ gravity.get '/api/v1/profile/:id', (req, res) ->
     res.send 404, "Not Found."
   else if req.params.id is 'thearmoryshow'
     res.send fabricate 'profile',
-      owner_type: 'FairOrganizer'
+      owner_type: 'Fair'
       owner: { default_fair_id: 'the-armory-show' }
   else if req.params.id is 'gagosian-gallery'
     res.send fabricate 'profile',
@@ -140,7 +140,10 @@ gravity.get '/api/v1/artwork/.*/flag', (req, res) ->
   res.send [fabricate 'artwork']
 
 gravity.get '/api/v1/me', (req, res) ->
-  res.send [fabricate 'user']
+  res.send fabricate 'user'
+
+gravity.get '/api/v1/me/partners', (req, res) ->
+  res.send [fabricate 'partner']
 
 gravity.post '/api/v1/me/unsubscribe*', (req, res) ->
   res.send [fabricate 'user']
@@ -165,6 +168,12 @@ gravity.get '/oauth2/authorize', (req, res) ->
                 </form>
                 </body>
             </html>"
+
+gravity.get '/api/v1/user/:id', (req, res) ->
+  res.send fabricate 'user'
+
+gravity.get '/api/v1/user/:id/access_controls', (req, res) ->
+  res.send [fabricate 'access_control']
 
 #
 # API V2 -----------------------------------------------------------------------
