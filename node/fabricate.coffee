@@ -168,7 +168,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       item_type: 'FeaturedLink'
 
     when 'user'
-      id: '54276766fd4f50996aeca2b8'
+      id: '54276766fd4f50996aeca2' + _.random(10,99)
       name: 'Craig Spaeth'
       website: null
       email: 'craigspaeth@gmail.com'
