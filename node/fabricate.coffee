@@ -794,7 +794,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       end_at: "2014-03-08T17:30:00+00:00"
       updated_at: "2014-02-24T16:34:25Z"
 
-   when 'artist_filtered_search_suggest'
+    when 'artist_filtered_search_suggest'
       total: 79
       related_gene: {}
       medium:
