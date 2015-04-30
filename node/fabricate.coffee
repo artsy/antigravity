@@ -116,6 +116,7 @@ module.exports = fabricate = (type, extObj = {}) ->
 
     when 'partner'
       id: 'gagosian' + _.uniqueId()
+      _id: '5086df098523e60002000012'
       name: 'Gagosian Gallery'
       admin: fabricate 'user'
       sortable_id: 'gagosian'
@@ -167,11 +168,11 @@ module.exports = fabricate = (type, extObj = {}) ->
       item_type: 'FeaturedLink'
 
     when 'user'
-      id: 'foobar' + _.uniqueId()
+      id: '54276766fd4f50996aeca2' + _.random(10,99)
       name: 'Craig Spaeth'
       website: null
       email: 'craigspaeth@gmail.com'
-      type: 'User'
+      type: 'Admin'
       lab_features: []
       profession: 'engineer'
       address: '401 Broadway'
@@ -550,6 +551,7 @@ module.exports = fabricate = (type, extObj = {}) ->
           }
         ]
       }
+
 
     when 'feature'
       id: "bitty-the-cat"
