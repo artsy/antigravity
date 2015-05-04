@@ -330,6 +330,7 @@ module.exports = fabricate = (type, extObj = {}) ->
           "last 60 days": 0.22
 
     when 'show'
+      _id: '4d8cd73191a5c50ce210002a'
       id: 'gagosian-gallery-inez-and-vinoodh' + _.uniqueId()
       partner: fabricate 'partner'
       fair: null
