@@ -175,6 +175,9 @@ gravity.get '/api/v1/user/:id', (req, res) ->
 gravity.get '/api/v1/user/:id/access_controls', (req, res) ->
   res.send [fabricate 'access_control']
 
+gravity.get '/api/v1/show/:id', (req, res) ->
+  res.send fabricate 'show'
+
 #
 # API V2 -----------------------------------------------------------------------
 #
