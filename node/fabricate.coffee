@@ -760,6 +760,34 @@ module.exports = fabricate = (type, extObj = {}) ->
       email: 'info@eliridgway.com'
       fax: ''
       publicly_viewable: true
+      day_schedules: [
+        {
+          _id: "5543d893726169750b990100",
+          start_time: 36000,
+          end_time: 68400,
+          day_of_week: "Sunday"
+        }, {
+          _id: "5543d8937261697591bd0100",
+          start_time: 36000,
+          end_time: 68400,
+          day_of_week: "Monday"
+        }, {
+          _id: "5543d89472616978f1e40100",
+          start_time: 36000,
+          end_time: 68400,
+          day_of_week: "Tuesday"
+        }, {
+          _id: "5543d8947261690f169d0100",
+          start_time: 36000,
+          end_time: 68400,
+          day_of_week: "Wednesday"
+        }, {
+          _id: "5543d8947261695aea200200",
+          start_time: 36000,
+          end_time: 68400,
+          day_of_week: "Thursday"
+        }
+      ]
 
     when 'partner_artist'
       id: _.uniqueId()
