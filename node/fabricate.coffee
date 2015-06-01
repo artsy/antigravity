@@ -362,7 +362,7 @@ module.exports = fabricate = (type, extObj = {}) ->
           _id: "556c77227261694a5fef0600",
           title: "Inez and Vinoodh Gallery Walkthrough",
           start_at: "2015-01-08T19:15:00+00:00",
-          end_at: "2015-01-08T21:00:00+00:00",
+          end_at: "2015-01-09T02:00:00+00:00",
           description: "Artists Inez and Vinoodh visit the gallery.",
           event_type: "Other"
         }
