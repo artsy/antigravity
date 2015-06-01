@@ -349,6 +349,24 @@ module.exports = fabricate = (type, extObj = {}) ->
       status: 'closed'
       updated_at: '2013-09-26T15:03:29Z'
       coordinates: null
+      events: [
+        {
+          _id: "556c77227261694a5fef0600"
+          title: "Inez and Vinoodh Opening"
+          start_at: "2015-01-07T20:00:00+00:00"
+          end_at: "2015-01-07T21:00:00+00:00"
+          description: "Inez and Vinoodh present their new works."
+          event_type: "Opening Reception"
+        }
+        {
+          _id: "556c77227261694a5fef0600",
+          title: "Inez and Vinoodh Gallery Walkthrough",
+          start_at: "2015-01-08T19:15:00+00:00",
+          end_at: "2015-01-08T21:00:00+00:00",
+          description: "Artists Inez and Vinoodh visit the gallery.",
+          event_type: "Other"
+        }
+      ]
 
     when 'page'
       content: 'This is an awesome page'
