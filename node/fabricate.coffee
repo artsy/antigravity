@@ -936,4 +936,122 @@ module.exports = fabricate = (type, extObj = {}) ->
           name: "-1:1000000000000"
           count: 74
 
+    when 'article'
+      {
+        "author": {
+          "id": "503f86e462d56000020002cc",
+          "name": "Artsy Editorial",
+          "profile_id": "5086df078523e60002000009",
+          "profile_handle": "editorial"
+        },
+        "author_id": "503f86e462d56000020002cc",
+        "fair_id": null,
+        "featured": true,
+        "featured_artist_ids": [
+          "4d9b330cff9a375c2f0031a8"
+        ],
+        "featured_artwork_ids": [
+          "541c4d3f7261692d70560000",
+          "5400a15e7261692d67530000",
+          "541c4d3f72616929e50e0600",
+          "541c4d3f7261692d91750000",
+          "541c4d3f7261692d84ba0000"
+        ],
+        "gravity_id": "542334267261692d6e590700",
+        "migrated_from_gravity": true,
+        "partner_ids": [
+          "4d8b92c44eb68a1b2c0004cb"
+        ],
+        "published": true,
+        "published_at": "2014-09-24T23:24:54.000Z",
+        "sections": [
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/9-vuUwfMbo9-dibbqjZQHQ%2FSterling_Ruby_2013_%282%29.jpg",
+            "caption": "<p>Sterling Ruby, Los Angeles, 2013. Photo by CG Watkins. Courtesy Sterling Ruby Studio and Gagosian Gallery</p>"
+          },
+          {
+            "type": "text",
+            "body": "<p>Take a look at one of&nbsp;<a href=\"https://artsy.net/artist/sterling-ruby\">Sterling Ruby</a>’s fluorescent spray paintings and it will likely make you see something else. In the hazy horizontal stripes of color, from grays and blacks to rose pink and emerald green, one might see a cross section of muscle or skeletal tissue under a microscope; the surface of an extraterrestrial planet; a broken television humming with static; or maybe just a Color Field painting. The inspiration behind these works, however, lies elsewhere—literally, on the horizon. The new suite of spray paintings that collectively form the exhibition “<a href=\"https://artsy.net/show/gagosian-gallery-sterling-ruby-vivids\">VIVIDS</a>,” at&nbsp;<a href=\"https://artsy.net/gagosian-gallery\">Gagosian Gallery</a>’s Hong Kong space, were inspired by the sky, particularly the smoggy Los Angeles sky that engulfs Ruby each day, as he drives into and out of the Downtown area where his studio is housed. For the artist, the daily commute has become a ritual; a recurring journey through which he has witnessed countless sunrises and sunsets, beckoning hours on end of contemplation. The resulting abstractions are intriguing, fresh compositions that transcend any particular geographic or cultural lexicon, making them especially fitting for the Hong Kong space. These glowing beacons, lined up along the walls of the stark white Pedder Building, look out onto a new horizon, and across the Asian continent at this moment, several other simultaneous exhibitions of Ruby’s works do the same.</p>"
+          },
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/OH0lVpFYr1YjJMTayxqVSw%2FSterling_Ruby_-_installation_09.jpg",
+            "caption": "<p>“Sterling Ruby: VIVIDS” at Gagosian Gallery, Hong Kong. Photos by Calvin Sit. © Sterling Ruby Studio, Courtesy Sterling Ruby Studio and Gagosian Gallery</p>"
+          },
+          {
+            "type": "artworks",
+            "ids": [
+              "5400a15e7261692d67530000",
+              "541c4d3f7261692d91750000",
+              "541c4d3f7261692d70560000"
+            ],
+            "layout": "overflow_fillwidth"
+          },
+          {
+            "type": "text",
+            "body": "<p>This wave of Asian shows comes on the heels of a vibrant spring season. In New York, three of Ruby’s giant ceramic dishes were featured in the&nbsp;<a href=\"https://artsy.net/feature/whitney-biennial-2014\">Whitney Biennial</a>, while his fluency in various mediums was on view in a giant solo show at Hauser &amp; Wirth, and, in June, Ruby sent an expansive installation of soft sculptures to&nbsp;<a href=\"https://artsy.net/art-basel\">Art Basel</a>&nbsp;for its Unlimited sector. This fall is no different: his works have surfaced in major shows in L.A. and New York (in LACMA’s “Variations: Conversations In and Around Abstract Painting” and Venus Over Manhattan’s “FIRE!” curated by&nbsp;<a href=\"https://artsy.net/simondepury\">Simon de Pury</a>); however, more extensive presentations of his works can be found in Hong Kong, Beijing, Tokyo, Taipei, and Gwangju—take your pick.</p>"
+          },
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/a2jvzxBrRFG_Bk-tss1kWw%2FInstallation_shot_Sterling_Ruby_%282%29.JPG",
+            "caption": "<p>Installation view of&nbsp;“The Los Angeles Project” at Ullens Center for Contemporary Art, Beijing. Courtesy UCCA</p>"
+          },
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/7v_VrQo5ydLiE0mMLG8FAA%2FInstallation_shot_Sterling_Ruby.JPG",
+            "caption": "<p>Installation view of&nbsp;“The Los Angeles Project” at Ullens Center for Contemporary Art, Beijing. Courtesy UCCA</p>"
+          },
+          {
+            "type": "text",
+            "body": "<p>While he’s shown throughout Asia before, this latest proliferation of exhibitions marks an exciting moment to consider the artist outside of the far-reaching Western art world. In addition to “VIVIDS,” his first solo show in Hong Kong, Ruby is featured at Beijing’s&nbsp;<a href=\"https://artsy.net/ucca\">Ullens Center for Contemporary Art</a>&nbsp;in “The Los Angeles Project,” an exhibition focused on seven Los Angeles artists and their city—<a href=\"http://ucca.org.cn/en/exhibition/los-angeles-project/\">described</a>&nbsp;by UCCA as “one of the most important art centers in the Western world.” In Ruby’s solo show within the exhibition, his unique spin on tenets of Minimalism is manifested through a 30-meter-long cycle of spray paintings, a grouping of 2D collage works, and a work from his “Monumental Stalagmite” series—a giant horizontal pillar made from drips of urethane. The show, a spirited slice of the artist’s recent practice, is testament to non-Western interest in Ruby and his generation in L.A., and speaks to his current ubiquity across the continent.</p>"
+          },
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/y_LxshSm4vhcxSEoX1l6lw%2FSterling_Ruby_%281%29.jpg",
+            "caption": "<p>Installation view,&nbsp;Taipei Biennial 2015. Courtesy Taipei Biennial.&nbsp;</p>"
+          },
+          {
+            "type": "image",
+            "url": "https://artsy-media-uploads.s3.amazonaws.com/0sgRZG_yDlu1LEd_EGxvHA%2FSterling_Ruby_%284%29_%281%29.jpg",
+            "caption": "<p>Installation&nbsp;view,&nbsp;Taipei Biennial&nbsp;2015. Courtesy Taipei Biennial.&nbsp;</p>"
+          },
+          {
+            "type": "text",
+            "body": "<p>Ruby also debuted works in both the&nbsp;<a href=\"https://artsy.net/gwangju-biennale\">Gwangju Biennale</a>&nbsp;and the Taipei Biennial this September. For the Gwangju Biennale, Ruby fabricated five towering, functional stoves that were lit during the opening ceremonies. Meanwhile, at the Tapei Biennial under the curation of Nicolas Bourriaud, he presents 35 collage works that combine painting, drawing, and print techniques, displaying his dialogue with material and responding to the Biennial’s overall theme, the impact of human life on the earth and its atmosphere—an especially relevant prompt given Ruby’s marked interest in the cosmos and existentialism. His works fills three gallery walls, transitioning from the artist’s classic use of neons, works splattered with nail polish, and collaged photographs and cardboard that incorporate planetary imagery.</p>"
+          },
+          {
+            "type": "artworks",
+            "ids": [
+              "541c4d3f7261692d84ba0000",
+              "541c4d3f72616929e50e0600"
+            ],
+            "layout": "overflow_fillwidth"
+          },
+          {
+            "type": "text",
+            "body": "<p>Back in Hong Kong, “VIVIDS” exemplifies Ruby’s ability to transform the traditionally gritty implications behind spray paint and graffiti culture into tranquil, mesmerizing contemplations of color and material. “The desire to make paintings was an absolute reaction to seeing graffiti and territorial disputes writ large in the streets, almost as if a case study,” Ruby recently&nbsp;<a href=\"http://www.gagosian.com/now/qa--sterling-ruby\">said in an interview</a>. “I found it almost impossible to ignore my generation’s continued struggle to find ways to make a meaningful painting.” These new works, responses to the radiant sky and the kaleidoscope of colors it generates as the sun drifts into and out of the horizon, are born from a universal phenomenon, and nod to the human fixation on beginnings and endings. By connecting “VIVIDS” to his city, where a notorious layer of smog directly affects perception of the sky’s range of color, he circles back to the Taipei Biennial’s theme, considering man’s impact on the planet. Distilling omnipresent human experiences in this way, and employing choice materials and colors, Ruby ensures an appeal that transcends the distinctions of East and West.</p>"
+          },
+          {
+            "type": "text",
+            "body": "<p>—<a href=\"https://artsy.net/calesser\">Casey Lesser</a><br></p><p><i>“<a href=\"https://artsy.net/show/gagosian-gallery-sterling-ruby-vivids\">Sterling Ruby: VIVIDS</a>” is\\\non view at </i><a href=\"https://artsy.net/gagosian-gallery\"><i>Gagosian</i></a><i>, Hong Kong, Sept. 13th–Oct. 25th, 2014.</i>&nbsp;</p><p><i>See more of Ruby’s works at\\\nthe </i><a href=\"https://artsy.net/gwangju-biennale\"><i>Gwangju\\\nBiennale</i></a><i>, Sept.\\\n5th–Nov. 9th, 2014; Taipei Biennial Sept. 13th, 2014–Jan. 4th, 2015; and “The\\\nLos Angeles Project” at </i><a href=\"https://artsy.net/ucca\"><i>Ullens\\\nCenter for Contemporary Art</i></a><i>, Beijing, Sept. 13th–Nov. 9th, 2014.</i></p>"
+          }
+        ],
+        "thumbnail_image": "https://d1ycxz9plii3tb.cloudfront.net/post_images/542350797261695b49510000/large.jpg",
+        "thumbnail_teaser": "Take a look at one of Sterling Ruby’s fluorescent spray paintings and it will\\\nlikely make you see something else. In the hazy horizontal stripes of color,\\\nfrom grays and blacks to rose pink and emerald green, one might see a cross\\\nsection of muscle or skeletal tissue under a microscope; the surface of an\\\nextraterrestrial planet; a broken television humming with static; or maybe just\\\na Color Field painting. The inspiration behind these works, however, lies\\\nelsewhere—literally, on the horizon. The new suite of spray paintings that\\\ncollectively form the exhibition “VIVIDS,” at Gagosian Gallery’s Hong Kong space, were inspired by the sky,\\\nparticularly the smoggy Los Angeles sky that engulfs Ruby each day, as he\\\ndrives into and out of the Downtown area where his studio is housed. For the\\\nartist, the daily commute has become a ritual; a recurring journey through\\\nwhich he has witnessed countless sunrises and sunsets, beckoning hours on end\\\nof contemplation. The resulting abstractions are intriguing, fresh compositions\\\nthat transcend any particular geographic or cultural lexicon, making them\\\nespecially fitting for the Hong Kong space. These glowing beacons, lined up\\\nalong the walls of the stark white Pedder Building, look out onto a new\\\nhorizon, and across the Asian continent at this moment, several other\\\nsimultaneous exhibitions of Ruby’s works do the same.",
+        "thumbnail_title": "On The Heels of A Stellar Year in the West, Sterling Ruby Makes His Vivid Mark on Asia",
+        "tier": 2,
+        "title": "On The Heels of A Stellar Year in the West, Sterling Ruby Makes His Vivid Mark on Asia",
+        "updated_at": "2015-05-22T18:47:19.033Z",
+        "slug": "editorial-on-the-heels-of-a-stellar-year",
+        "tags": [],
+        "lead_paragraph": "<p><br></p>",
+        "hero_section": null,
+        "vertical_id": null,
+        "auction_id": null,
+        "show_ids": null,
+        "primary_featured_artist_ids": null,
+        "id": _.uniqueId()
+      }
+
   , extObj
