@@ -9,3 +9,4 @@ if (!require.extensions[".coffee"]) {
 module.exports.fabricate = require("./node/fabricate.coffee");
 module.exports.server = require("./node/server.coffee");
 module.exports.fabricate2 = require("./node/fabricate2.coffee");
+module.exports.positronServer = require("./node/positron_server.coffee");
