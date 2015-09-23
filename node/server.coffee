@@ -178,6 +178,12 @@ gravity.get '/api/v1/user/:id/access_controls', (req, res) ->
 gravity.get '/api/v1/show/:id', (req, res) ->
   res.send fabricate 'show'
 
+gravity.get '/api/v1/related/sales', (req, res) ->
+  res.send [fabricate('sale')]
+
+gravity.get '/api/v1/sale/:sale_id/sale_artwork/:id', (req, res) ->
+  res.send fabricate 'sale_artwork'
+
 #
 # API V2 -----------------------------------------------------------------------
 #
