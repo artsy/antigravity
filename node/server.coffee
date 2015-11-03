@@ -148,6 +148,9 @@ gravity.get '/api/v1/me/partners', (req, res) ->
 gravity.post '/api/v1/me/unsubscribe*', (req, res) ->
   res.send [fabricate 'user']
 
+gravity.get '/api/v1/artist/:id', (req, res) ->
+  res.send fabricate 'artist'
+
 gravity.post '/api/v1/me/artwork_inquiry_request', (req, res) ->
   res.send fabricate 'user'
 
