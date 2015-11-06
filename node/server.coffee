@@ -142,6 +142,12 @@ gravity.get '/api/v1/artwork/.*/flag', (req, res) ->
 gravity.get '/api/v1/me', (req, res) ->
   res.send fabricate 'user'
 
+gravity.get '/api/v1/me/authentications', (req, res) ->
+  res.send [
+    { id: '123', uid: '456', provider: 'facebook' }
+    { id: '789', uid: '321', provider: 'twitter' }
+  ]
+
 gravity.get '/api/v1/me/partners', (req, res) ->
   res.send [fabricate 'partner']
 
