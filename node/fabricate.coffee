@@ -140,7 +140,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       id: "getty"
       location: ""
       owner: fabricate 'partner'
-      owner_type: "PartnerMuseum"
+      owner_type: "PartnerInstitution"
       posts_count: 1
       private: false
       published: true
