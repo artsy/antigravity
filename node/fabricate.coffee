@@ -841,6 +841,15 @@ module.exports = fabricate = (type, extObj = {}) ->
       end_at: "2014-03-08T17:30:00+00:00"
       updated_at: "2014-02-24T16:34:25Z"
 
+    when 'show_event'
+      _id: _.uniqueId()
+      partner_show: fabricate 'show'
+      title: ""
+      start_at: "2012-02-09T18:00:00+00:00"
+      end_at: "2012-02-09T20:00:00+00:00"
+      description: ""
+      event_type: "Opening Reception"
+
     when 'artist_filtered_search_suggest'
       total: 79
       related_gene: {}
