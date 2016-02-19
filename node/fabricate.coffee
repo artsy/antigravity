@@ -1062,6 +1062,15 @@ module.exports = fabricate = (type, extObj = {}) ->
         "primary_featured_artist_ids": null,
         "contributing_authors": [],
         "is_super_article": false,
+        "email_metadata": {},
+        "super_article": {},
+        "share_description": "",
+        "fair_programming_ids": [],
+        "fair_artsy_ids": [],
+        "fair_about_ids": [],
+        "section_ids": [],
+        "biography_for_artist_id": null,
+        "keywords": ['stellar', 'ruby', 'asia'],
         "id": _.uniqueId()
       }
 
