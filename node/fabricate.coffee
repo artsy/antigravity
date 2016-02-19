@@ -1060,6 +1060,8 @@ module.exports = fabricate = (type, extObj = {}) ->
         "auction_id": null,
         "show_ids": null,
         "primary_featured_artist_ids": null,
+        "contributing_authors": [],
+        "is_super_article": false,
         "id": _.uniqueId()
       }
 
