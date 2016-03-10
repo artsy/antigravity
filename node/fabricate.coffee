@@ -41,6 +41,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       updated_at: '2011-12-12T18:51:39-05:00'
 
     when 'artwork'
+      _id: "564be09ab202a319e90000e2"
       id: 'skull' + _.uniqueId()
       title: 'Skull'
       artist:
