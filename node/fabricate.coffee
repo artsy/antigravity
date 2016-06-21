@@ -180,6 +180,7 @@ module.exports = fabricate = (type, extObj = {}) ->
       collector_level: '5'
       default_profile_id: "alessandra"
       likely_to_purchase: 0
+      has_partner_access: true
       get: (attr) -> return @[attr]
       set: (attrs) -> _.extend @, attrs
 
