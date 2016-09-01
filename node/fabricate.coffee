@@ -998,6 +998,56 @@ module.exports = fabricate = (type, extObj = {}) ->
               "541c4d3f7261692d70560000"
             ],
             "layout": "overflow_fillwidth"
+            "artworks": [
+              {
+                "type": "artwork",
+                "id": "5400a15e7261692d67530000",
+                "slug": "poppies",
+                "date": "1991",
+                "title": "Poppies",
+                "image": "https://d32dm0rphc51dk.cloudfront.net/drYmDIGBNsc49rrtiLzlbw/larger.jpg",
+                "partner": {
+                  "name": "Pace",
+                  "slug": "pace"
+                },
+                "artist": {
+                  "name": "Poppin Pop",
+                  "slug": "poppin-pop"
+                }
+              },
+              {
+                "type": "artwork",
+                "id": "541c4d3f7261692d91750000",
+                "slug": "lillies",
+                "date": "1992",
+                "title": "Lillies",
+                "image": "https://d32dm0rphc51dk.cloudfront.net/drYmDIGBNsc49rrtiLzlbw/larger.jpg",
+                "partner": {
+                  "name": "Pace",
+                  "slug": "pace"
+                },
+                "artist": {
+                  "name": "Poppin Pop",
+                  "slug": "poppin-pop"
+                }
+              },
+              {
+                "type": "artwork",
+                "id": "541c4d3f7261692d70560000",
+                "slug": "buffalo-herd",
+                "date": "1991",
+                "title": "Buffalo Herd",
+                "image": "https://d32dm0rphc51dk.cloudfront.net/drYmDIGBNsc49rrtiLzlbw/larger.jpg",
+                "partner": {
+                  "name": "Gagosian",
+                  "slug": "gagosian"
+                },
+                "artist": {
+                  "name": "Lovely Lady",
+                  "slug": "lovely-lady"
+                }
+              }
+            ]
           },
           {
             "type": "text",
@@ -1037,7 +1087,67 @@ module.exports = fabricate = (type, extObj = {}) ->
               "541c4d3f7261692d84ba0000",
               "541c4d3f72616929e50e0600"
             ],
-            "layout": "overflow_fillwidth"
+            "layout": "overflow_fillwidth",
+            "artworks": [
+              {
+                "type": "artwork",
+                "id": "541c4d3f7261692d84ba0000",
+                "slug": "canary",
+                "date": "1993",
+                "title": "Canary",
+                "image": "https://d32dm0rphc51dk.cloudfront.net/drYmDIGBNsc49rrtiLzlbw/larger.jpg",
+                "partner": {
+                  "name": "Pace",
+                  "slug": "pace"
+                },
+                "artist": {
+                  "name": "Can Canary",
+                  "slug": "can-canary"
+                }
+              },
+              {
+                "type": "artwork",
+                "id": "541c4d3f72616929e50e0600",
+                "slug": "burrito-man",
+                "date": "1992",
+                "title": "Burrito Man",
+                "image": "https://d32dm0rphc51dk.cloudfront.net/drYmDIGBNsc49rrtiLzlbw/larger.jpg",
+                "partner": {
+                  "name": "FoodOrg",
+                  "slug": "foodorg"
+                },
+                "artist": {
+                  "name": "Bob Burrito",
+                  "slug": "bob-burrito"
+                }
+              },
+            ]
+          },
+          {
+            "type": "image_set",
+            "images": [
+              {
+                "type": 'image',
+                "url": 'https://image.png',
+                "caption": 'Trademarked',
+              },
+              {
+                "type": 'artwork',
+                "id": '123',
+                "slug": 'andy-warhol',
+                "title": 'The Piece',
+                "date": '2015-04-01',
+                "image": 'http://image.png',
+                "partner": {
+                  "name": "FoodOrg",
+                  "slug": "foodorg"
+                },
+                "artist": {
+                  "name": "Bob Burrito",
+                  "slug": "bob-burrito"
+                }
+              }
+            ]
           },
           {
             "type": "text",
@@ -1073,7 +1183,9 @@ module.exports = fabricate = (type, extObj = {}) ->
         "section_ids": [],
         "biography_for_artist_id": null,
         "keywords": ['stellar', 'ruby', 'asia'],
-        "id": _.uniqueId()
+        "id": _.uniqueId(),
+        "channel_id": "541c4d3f72616929e50e0600",
+        "partner_channel_id": null
       }
 
   , extObj
