@@ -69,20 +69,19 @@ function fixturePaths(all: boolean): Array<string> {
     console.error(error)
     process.exit(1)
   } else {
-    const paths = []
-    stdout.split(/\n/).forEach(file => {
-      if (extname(file) === ".json") {
-        paths.push(file)
-      }
-    })
-    return paths
+    return stdout.split(/\n/).filter(file => extname(file) === ".json")
   }
 }
 
 async function main(argv) {
+  const rebuildIndex = argv.indexOf("--rebuild")
+  const rebuild = rebuildIndex >= 0
+  if (rebuild) {
+    argv.splice(rebuildIndex, 1)
+  }
+
   const email = argv[2]
   const password = argv[3]
-  const rebuild = argv[4] === "--rebuild"
 
   if (!email || !password) {
     console.log("Usage: gravity.js EMAIL PASSWORD [--rebuild]")
@@ -96,7 +95,9 @@ async function main(argv) {
     for (const fixturePath of paths) {
       const payload = await get(token, fixturePath)
       writeFile(join("gravity", fixturePath), JSON.stringify(payload, null, 2), error => {
-        console.error(error)
+        if (error) {
+          console.error(error)
+        }
       })
     }
   }

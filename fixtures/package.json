@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "flow && eslint .",
-    "gravity": "babel-node gravity/index.js"
+    "gravity": "babel-node gravity/index.js",
+    "gravity-rebuild": "babel-node gravity/index.js --rebuild"
   },
   "author": {
     "name": "Eloy Durán",
