@@ -1,0 +1,36 @@
+{
+  "name": "artsy-antigravity-fixtures",
+  "version": "1.0.0",
+  "description": "Recorded responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "flow && eslint .",
+    "gravity": "babel-node gravity/index.js"
+  },
+  "author": {
+    "name": "Eloy Durán",
+    "email": "eloy.de.enige@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-plugin-transform-regenerator": "^6.16.1",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.10.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "flow-bin": "^0.35.0"
+  }
+}
