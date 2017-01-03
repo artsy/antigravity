@@ -46,7 +46,11 @@ module.exports = fabricate = (type, extObj = {}) ->
       title: 'Skull'
       artist:
         id: 'andy-warhol'
-        name: "Andy Warhol"
+        name: 'Andy Warhol'
+      artists: [
+        id: 'andy-warhol'
+        name: 'Andy Warhol'
+      ]
       images: [
         fabricate 'artwork_image'
         fabricate 'artwork_image', is_default: true
