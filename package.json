@@ -1,22 +1,22 @@
 {
-    "name": "antigravity",
-    "version": "0.1.3",
-    "author": {
-        "name": "Craig Spaeth",
-        "email": "craigspaeth@gmail.com",
-        "url": "http://craigspaeth.com"
-    },
-    "contributors": [{
-        "name": "Brennan Moore",
-        "email": "brennanmoore@gmail.com",
-        "url": "http://brennanmoore.com"
-    }],
-    "dependencies": {
-        "express": "*"
-    },
-    "devDependencies": {
-        "underscore": "*",
-        "coffee-script": "*"
-    },
-    "license": "MIT"
+  "name": "antigravity",
+  "version": "0.1.3",
+  "author": {
+    "name": "Craig Spaeth",
+    "email": "craigspaeth@gmail.com",
+    "url": "http://craigspaeth.com"
+  },
+  "contributors": [{
+    "name": "Brennan Moore",
+    "email": "brennanmoore@gmail.com",
+    "url": "http://brennanmoore.com"
+  }],
+  "dependencies": {
+    "express": "*",
+    "coffeescript": "1.11.1"
+  },
+  "devDependencies": {
+    "underscore": "*"
+  },
+  "license": "MIT"
 }
