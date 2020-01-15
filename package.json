@@ -1,18 +1,7 @@
 {
-  "name": "antigravity",
+  "name": "@artsy/antigravity",
   "version": "0.2.0",
-  "author": {
-    "name": "Craig Spaeth",
-    "email": "craigspaeth@gmail.com",
-    "url": "http://craigspaeth.com"
-  },
-  "contributors": [
-    {
-      "name": "Brennan Moore",
-      "email": "brennanmoore@gmail.com",
-      "url": "http://brennanmoore.com"
-    }
-  ],
+  "author": "Art.sy Inc <it@artsymail.com>",
   "dependencies": {
     "express": "4.17.1",
     "lodash": "4.17.15",
