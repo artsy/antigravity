@@ -6,17 +6,26 @@
     "email": "craigspaeth@gmail.com",
     "url": "http://craigspaeth.com"
   },
-  "contributors": [{
-    "name": "Brennan Moore",
-    "email": "brennanmoore@gmail.com",
-    "url": "http://brennanmoore.com"
-  }],
+  "contributors": [
+    {
+      "name": "Brennan Moore",
+      "email": "brennanmoore@gmail.com",
+      "url": "http://brennanmoore.com"
+    }
+  ],
   "dependencies": {
+    "coffeescript": "1.11.1",
     "express": "*",
-    "coffeescript": "1.11.1"
+    "prettier": "^1.19.1"
   },
   "devDependencies": {
     "underscore": "*"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true
   },
   "license": "MIT"
 }
